@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../public/css/chat-room.css">
+</head>
+<body>
+    <div id="screen"></div> 
+    <span style="display:none;" id="secret"><%=test%></span>
+    <div id="chat">
+        <input type="text" id="texting" style="border-radius:3px;width:90%;">
+        <input type="button" id="send" onclick="send()" value="send" class="btn btn-primary">
+        <input type="button" onclick="reset()" id="reset" value="reset" class="btn btn-secondary">
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+    let g=document.getElementById('secret').innerHTML.toString();
+    socket.on(g, function(data) {
+   document.getElementById('screen').innerHTML+=data;
+   document.getElementById('screen').innerHTML+="\n";
+   });
+    function send(){
+        socket.emit("pri-mes",{content:document.getElementById('texting').value.toString(),room:g});
+
+    }
+    function reset() {
+        document.getElementById("texting").value="";
+    }
+</script>
+</body>
+</html>

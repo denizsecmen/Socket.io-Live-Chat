@@ -1,0 +1,40 @@
+html,body
+{
+    height: 100%;
+}
+#screen
+{
+    display: block;
+    min-width: 100%;
+    min-height: 85.4vh;
+    background-color: #eef;
+    overflow-y: scroll;
+}
+#chat
+{
+    display:flex;
+    max-height: 2vh;
+    padding: 5px;
+    width: 100%;
+    border-top: 1px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#send
+{
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+#reset
+{
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+}
+#texting
+{
+    min-height: 40px;
+}

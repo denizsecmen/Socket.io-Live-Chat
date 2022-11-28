@@ -1,0 +1,18 @@
+#tbl
+{
+height: 100%;
+min-width: 80%!important;
+}
+#container
+{
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+}
+#load
+{
+    margin-left: 5%;
+    margin-top: 30px;
+}
+#slc
+{width: 100px!important;}
